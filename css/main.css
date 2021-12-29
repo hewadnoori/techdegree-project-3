@@ -151,6 +151,9 @@ label.light {
   border-radius: 100%;
 }
 
+input:focus, textarea:focus{
+  border:3px solid blue;
+}
 @media screen and (min-width: 480px) {
 
   form {
