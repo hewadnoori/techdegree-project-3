@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <h1>THE CODE REVIEW</h1>
-    <h2>Signup for our newsletter</h2>
-    <p>Get the latest news on how your code is doing right in your inbox</p>
+    <header>
+        <h1>THE CODE REVIEW</h1>
+        <h2>Signup for our newsletter</h2>
+        <p>Get the latest news on how your code is doing right in your inbox</p>
+    </header>
+    
     <form action="index.html" method="post">
 
         <fieldset>
 
-            <legend>Contact Information</legend>
+            <legend id="contact">Contact Information</legend>
 
             <label for="name">Full Name</label>
             <input type="text" name="user_name" id="name" placeholder="Required" required>
@@ -88,48 +91,31 @@
                 <option value="WY">Wyoming</option>		
             </select>
             <label for="zip_code">Zip Code</label>
-            <input type="number" id="zip_code" >
+            <input type="number" id="zip_code" name="user_zip_code">
         </fieldset>
 
         <fieldset>
-        <legend>Your Profile</legend>
+            <legend>Newsletter</legend>
 
-        <label for="bio">Biography:</label>
-        <textarea name="user_bio" id="bio" cols="30" rows="10"></textarea>
+            <label>Select the newsletters you would like to receive</label>
+            <input type="checkbox" id="html" value="html_news" name="user_interest"><label class="light" for="html">HTML News</label><br>
+            <input type="checkbox" id="css" value="css_news" name="user_interest"><label class="light" for="css">CSS News</label><br>
+            <input type="checkbox" id="javascript" value="javascript_news" name="user_interest"><label class="light" for="javascript">Javascript News</label>
 
-        <label for="job">Job role:</label>
-        <select name="user_job" id="job">
-            <optgroup label="Web">
-                <option value="frontend_developer">Front-End Developer</option>
-                <option value="php_developer">PHP Developer</option>
-                <option value="python_developer">Python Developer</option>
-                <option value="rails_developer">Rails Developer</option>
-                <option value="web_developer">Web Developer</option>
-                <option value="wordpress_developer">Wordpress Developer</option>
-            </optgroup>
-            <optgroup label="Mobile">
-                <option value="android_developer">Android Developer</option>
-                <option value="ios_developer">iOS Developer</option>
-                <option value="mobile_developer">Mobile Developer</option>
-            </optgroup>
-            <optgroup label="Buisness">
-                <option value="buisness_owner">Business Owner</option>
-                <option value="freelancer">Freelancer</option>
-            </optgroup>
-        </select>
-
-        <label>Age:</label>
-        <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
-        <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">Over 13 or older</label>
-
-        <label>Interests:</label>
-        <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
-        <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
-        <input type="checkbox" id="buisness" value="interest_buisness" name="user_interest"><label class="light" for="buisness">Buisness</label>
-        
+            <label>Newsletter format</label>
+            <input type="radio" id="html" value="html" name="newsletter_format"><label for="html" class="light">HTML</label><br>
+            <input type="radio" id="plain-text" value="plain-text" name="newsletter_format"><label for="plain-text" class="light">Plain text</label>
+ 
+            <label for="bio">Other topics you'd like to hear about</label>
+            <textarea name="user_bio" id="bio" cols="30" rows="10"></textarea>
+            
         </fieldset>
 
         <button type="submit">Sign Up</button>
+        
     </form>
+    <footer>
+        <p>Copyright The Code Review</p>
+    </footer>
 </body>
 </html>
