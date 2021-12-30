@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family:'Merriweather','Nunito', sans-serif;
+  font-family:'Nunito', sans-serif;
   color: #384047;
 }
 h1{
@@ -68,7 +68,9 @@ select {
   margin-bottom: 30px;
   border-radius: 5px;
 }
-
+input[type="number"]{
+  width: 50vw;
+}
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 4px 8px 0;
@@ -117,6 +119,7 @@ label {
 .inline {
   display: inline;
 }
+
 #newsletter label:first-of-type{
   padding-top:10px;
 }
@@ -144,11 +147,61 @@ input:focus, textarea:focus{
 footer{
   font-style: italic;
   color: #8a97a0;
+  padding-bottom: 200px;
 }
 @media screen and (min-width: 768px) {
-
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header{
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div{
+    width: 50vw;
+  }
+  h1{
+    width: 100%;
+  }
+  h2{
+    padding-top: 30px;
+  }
+  p{
+    padding-bottom: 20px;
+  }
   form {
-    max-width: 480px;
+    width: 50vw;
+  }
+  label{
+    font-weight:500;
+  }
+  #contact legend{
+    padding-top: 50px;
+  }
+  #contact label{
+    display: inline-block;
+    width: 9.4vw;
+  }
+  input[type="number"]{
+    width:15vw;
+    margin-bottom: 40px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  select{
+    width:40vw;
+    display: inline-block;
   }
 
 }
